@@ -1,0 +1,44 @@
+﻿<Window x:Class="CafeClient.Presentation.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diplom"
+        mc:Ignorable="d"
+        Title="CaféClient"
+        WindowStartupLocation="CenterScreen"
+        Width="900" Height="600"
+        Background="#F7F7F7"
+        ResizeMode="CanMinimize">
+    <Grid>
+        <!-- Верхняя панель -->
+        <DockPanel LastChildFill="False" Height="56" Background="#4CAF50" VerticalAlignment="Top">
+            <TextBlock Text="CaféClient" Foreground="White" FontSize="22" FontWeight="Bold" Margin="24,0,0,0" VerticalAlignment="Center"/>
+            <TextBlock x:Name="UserInfoText" Text="Администратор: Грачев Егор" Foreground="White" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,24,0" DockPanel.Dock="Right"/>
+        </DockPanel>
+
+        <!-- Основная область -->
+        <Grid Margin="0,56,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Навигация -->
+            <StackPanel Background="#F4F8F4" Grid.Column="0" >
+                <ListBox x:Name="NavListBox" SelectedIndex="0" BorderThickness="0" Background="Transparent" SelectionChanged="NavListBox_SelectionChanged">
+                    <ListBoxItem Content="Клиенты" Padding="20,16" FontSize="16"/>
+                    <ListBoxItem Content="Заказы" Padding="20,16" FontSize="16"/>
+                    <ListBoxItem Content="Программа лояльности" Padding="20,16" FontSize="16"/>
+                    <ListBoxItem Content="Отчеты" Padding="20,16" FontSize="16"/>
+                    <ListBoxItem Content="Настройки" Padding="20,16" FontSize="16"/>
+                </ListBox>
+            </StackPanel>
+
+            <!-- Контент -->
+            <Border Grid.Column="1" Background="White" Margin="16" CornerRadius="8" Padding="24">
+                <ContentControl x:Name="MainContent"/>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

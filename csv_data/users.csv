@@ -1,0 +1,5 @@
+id,username,password_hash,full_name,role,date_created
+1,admin_user,hashed_password_1,Admin FullName,administrator,2024-05-01 10:00:00
+2,manager_jane,hashed_password_2,Jane Manager,manager,2024-05-01 10:05:00
+3,waiter_john,hashed_password_3,John Waiter,waiter,2024-05-02 11:00:00
+4,waiter_alice,hashed_password_4,Alice Waitstaff,waiter,2024-05-03 09:30:00

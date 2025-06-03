@@ -1,0 +1,22 @@
+<UserControl x:Class="CafeClient.Presentation.Views.ReportsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="White">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Отчеты" FontSize="20" FontWeight="Bold" Margin="0,0,0,12"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                <ComboBox Width="200" Margin="0,0,8,0">
+                    <ComboBoxItem Content="Статистика по клиентам"/>
+                    <ComboBoxItem Content="Популярные товары"/>
+                    <ComboBoxItem Content="Динамика заказов"/>
+                    <ComboBoxItem Content="Эффективность лояльности"/>
+                </ComboBox>
+                <Button Content="Сформировать" Height="28" Background="#4CAF50" Foreground="White" Padding="16,0"/>
+            </StackPanel>
+            <Border BorderBrush="#DDD" BorderThickness="1" CornerRadius="4" Padding="16" Height="260">
+                <TextBlock Text="Здесь будет отображаться выбранный отчет." Foreground="#888"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

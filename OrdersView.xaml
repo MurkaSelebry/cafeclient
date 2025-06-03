@@ -1,0 +1,26 @@
+<UserControl x:Class="CafeClient.Presentation.Views.OrdersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="White">
+<Grid>
+        <StackPanel>
+            <TextBlock Text="Заказы" FontSize="20" FontWeight="Bold" Margin="0,0,0,12"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                <TextBox Width="220" Height="28" Margin="0,0,8,0" VerticalAlignment="Center"
+                         Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Content="Поиск" Height="28" Command="{Binding SearchCommand}" Margin="0,0,8,0"/>
+                <Button Content="Добавить заказ" Height="28" Background="#4CAF50" Foreground="White" Padding="16,0"
+                        Command="{Binding AddOrderCommand}"/>
+            </StackPanel>
+            <DataGrid ItemsSource="{Binding Orders}" AutoGenerateColumns="False" Height="300">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40"/>
+                    <DataGridTextColumn Header="Клиент" Binding="{Binding ClientId}" Width="*"/>
+                    <DataGridTextColumn Header="Дата" Binding="{Binding OrderDate}" Width="120"/>
+                    <DataGridTextColumn Header="Сумма" Binding="{Binding TotalAmount}" Width="80"/>
+                    <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

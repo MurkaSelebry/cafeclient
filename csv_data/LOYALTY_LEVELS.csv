@@ -1,0 +1,5 @@
+id,name,min_points,discount_percent
+1,Standard,0,0.0
+2,Silver,100,5.0
+3,Gold,500,10.0
+4,Platinum,1000,15.0
