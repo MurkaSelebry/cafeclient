@@ -1,4 +1,4 @@
-﻿<Window x:Class="CafeClient.Presentation.Views.MainWindow"
+﻿<Window x:Class="diplom.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -25,20 +25,17 @@
             </Grid.ColumnDefinitions>
 
             <!-- Навигация -->
-            <StackPanel Background="#F4F8F4" Grid.Column="0" >
-                <ListBox x:Name="NavListBox" SelectedIndex="0" BorderThickness="0" Background="Transparent" SelectionChanged="NavListBox_SelectionChanged">
-                    <ListBoxItem Content="Клиенты" Padding="20,16" FontSize="16"/>
-                    <ListBoxItem Content="Заказы" Padding="20,16" FontSize="16"/>
-                    <ListBoxItem Content="Программа лояльности" Padding="20,16" FontSize="16"/>
-                    <ListBoxItem Content="Отчеты" Padding="20,16" FontSize="16"/>
-                    <ListBoxItem Content="Настройки" Padding="20,16" FontSize="16"/>
-                </ListBox>
-            </StackPanel>
+            <StackPanel Background="#F4F8F4" Grid.Column="0">
+            <Button Content="Клиенты" Name="BtnClients" Margin="10" Height="40" Click="NavButton_Click"/>
+            <Button Content="Заказы" Name="BtnOrders" Margin="10" Height="40" Click="NavButton_Click"/>
+            <Button Content="Программа лояльности" Name="BtnLoyalty" Margin="10" Height="40" Click="NavButton_Click"/>
+            <Button Content="Отчеты" Name="BtnReports" Margin="10" Height="40" Click="NavButton_Click"/>
+            <Button Content="Настройки" Name="BtnSettings" Margin="10" Height="40" Click="NavButton_Click"/>
+        </StackPanel>
 
             <!-- Контент -->
-            <Border Grid.Column="1" Background="White" Margin="16" CornerRadius="8" Padding="24">
-                <ContentControl x:Name="MainContent"/>
-            </Border>
+                    <ContentPresenter x:Name="MainContentPresenter" Grid.Column="1" Margin="16"/>
+
         </Grid>
     </Grid>
 </Window>

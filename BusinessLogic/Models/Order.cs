@@ -8,7 +8,7 @@ namespace CafeClient.BusinessLogic.Models
         public int Id { get; set; }
         public int ClientId { get; set; }
         public int UserId { get; set; }
-        public DateTime OrderDate { get; set; }
+        public string OrderDate { get; set; }
         public decimal TotalAmount { get; set; }
         public decimal DiscountAmount { get; set; }
         public int BonusPointsUsed { get; set; }

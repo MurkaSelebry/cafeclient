@@ -25,6 +25,12 @@ namespace CafeClient.DataAccess.Repositories
                     Id = (int)(long)row["id"],
                     FirstName = row["first_name"].ToString(),
                     LastName = row["last_name"].ToString(),
+                    Phone = row["phone"]?.ToString(),
+                    Email = row["email"]?.ToString(),
+                    BirthDate = row["birth_date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["birth_date"]),
+                    LoyaltyLevelId = row["loyalty_level_id"] == DBNull.Value ? 0 : Convert.ToInt32(row["loyalty_level_id"]),
+                    BonusPoints = row["bonus_points"] == DBNull.Value ? 0 : Convert.ToInt32(row["bonus_points"]),
+                    RegistrationDate = row["registration_date"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(row["registration_date"])
                 });
             }
             return clients;
@@ -41,7 +47,12 @@ namespace CafeClient.DataAccess.Repositories
                 Id = (int)(long)row["id"],
                 FirstName = row["first_name"].ToString(),
                 LastName = row["last_name"].ToString(),
-                // Map other properties...
+                Phone = row["phone"]?.ToString(),
+                Email = row["email"]?.ToString(),
+                BirthDate = row["birth_date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["birth_date"]),
+                LoyaltyLevelId = row["loyalty_level_id"] == DBNull.Value ? 0 : Convert.ToInt32(row["loyalty_level_id"]),
+                BonusPoints = row["bonus_points"] == DBNull.Value ? 0 : Convert.ToInt32(row["bonus_points"]),
+                RegistrationDate = row["registration_date"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(row["registration_date"])
             };
         }
 
@@ -84,7 +95,12 @@ namespace CafeClient.DataAccess.Repositories
                 Id = (int)(long)row["id"],
                 FirstName = row["first_name"].ToString(),
                 LastName = row["last_name"].ToString(),
-                // Map other properties...
+                Phone = row["phone"]?.ToString(),
+                Email = row["email"]?.ToString(),
+                BirthDate = row["birth_date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["birth_date"]),
+                LoyaltyLevelId = row["loyalty_level_id"] == DBNull.Value ? 0 : Convert.ToInt32(row["loyalty_level_id"]),
+                BonusPoints = row["bonus_points"] == DBNull.Value ? 0 : Convert.ToInt32(row["bonus_points"]),
+                RegistrationDate = row["registration_date"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(row["registration_date"])
             };
         }
 
@@ -101,7 +117,12 @@ namespace CafeClient.DataAccess.Repositories
                     Id = (int)(long)row["id"],
                     FirstName = row["first_name"].ToString(),
                     LastName = row["last_name"].ToString(),
-                    // Map other properties...
+                    Phone = row["phone"]?.ToString(),
+                    Email = row["email"]?.ToString(),
+                    BirthDate = row["birth_date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["birth_date"]),
+                    LoyaltyLevelId = row["loyalty_level_id"] == DBNull.Value ? 0 : Convert.ToInt32(row["loyalty_level_id"]),
+                    BonusPoints = row["bonus_points"] == DBNull.Value ? 0 : Convert.ToInt32(row["bonus_points"]),
+                    RegistrationDate = row["registration_date"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(row["registration_date"])
                 });
             }
             return clients;

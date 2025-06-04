@@ -80,6 +80,19 @@ namespace CafeClient.DataAccess.Repositories
             return orders;
         }
 
+        public List<Order> Search(string criteria)
+        {
+            var dt = _dbConnection.ExecuteQuery(
+                "SELECT * FROM ORDERS WHERE status LIKE @criteria OR CAST(client_id AS TEXT) LIKE @criteria OR CAST(order_date AS TEXT) LIKE @criteria",
+                new SqliteParameter("@criteria", $"%{criteria}%"));
+            var orders = new List<Order>();
+            foreach (DataRow row in dt.Rows)
+            {
+                orders.Add(Map(row));
+            }
+            return orders;
+        }
+
         private Order Map(DataRow row)
         {
             return new Order
@@ -87,7 +100,7 @@ namespace CafeClient.DataAccess.Repositories
                 Id = (int)(long)row["id"],
                 ClientId = (int)(long)row["client_id"],
                 UserId = (int)(long)row["user_id"],
-                OrderDate = row["order_date"] is System.DBNull ? default : (System.DateTime)row["order_date"],
+                OrderDate = row["order_date"].ToString(),
                 TotalAmount = (decimal)(double)row["total_amount"],
                 DiscountAmount = (decimal)(double)row["discount_amount"],
                 BonusPointsUsed = (int)(long)row["bonus_points_used"],

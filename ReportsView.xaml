@@ -6,16 +6,20 @@
         <StackPanel>
             <TextBlock Text="Отчеты" FontSize="20" FontWeight="Bold" Margin="0,0,0,12"/>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
-                <ComboBox Width="200" Margin="0,0,8,0">
+                <ComboBox Width="200" Margin="0,0,8,0"
+                          SelectedItem="{Binding SelectedReport}">
                     <ComboBoxItem Content="Статистика по клиентам"/>
                     <ComboBoxItem Content="Популярные товары"/>
                     <ComboBoxItem Content="Динамика заказов"/>
                     <ComboBoxItem Content="Эффективность лояльности"/>
                 </ComboBox>
-                <Button Content="Сформировать" Height="28" Background="#4CAF50" Foreground="White" Padding="16,0"/>
+                <Button Content="Сформировать" Height="28" Background="#4CAF50" Foreground="White" Padding="16,0"
+                        Command="{Binding GenerateReportCommand}"/>
+                <Button Content="Сохранить в txt" Height="28" Background="#2196F3" Foreground="White" Padding="16,0" Margin="8,0,0,0"
+                        Command="{Binding SaveReportCommand}"/>
             </StackPanel>
             <Border BorderBrush="#DDD" BorderThickness="1" CornerRadius="4" Padding="16" Height="260">
-                <TextBlock Text="Здесь будет отображаться выбранный отчет." Foreground="#888"/>
+                <TextBlock Text="{Binding ReportResult}" Foreground="#888"/>
             </Border>
         </StackPanel>
     </Grid>

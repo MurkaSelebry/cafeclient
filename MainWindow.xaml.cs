@@ -16,59 +16,34 @@ namespace diplom;
 /// </summary>
 public partial class MainWindow : Window
 {
+        private readonly ClientsView _clientsView = new ClientsView();
+        private readonly OrdersView _ordersView = new OrdersView();
+        private readonly LoyaltyView _loyaltyView = new LoyaltyView();
+        private readonly ReportsView _reportsView = new ReportsView();
+        private readonly SettingsView _settingsView = new SettingsView();
+
     public MainWindow(/*User user*/)
     {
         InitializeComponent();
         //var loginWindow = new LoginWindow();
         //loginWindow.Show();
-        // UserInfoText.Text = $"Администратор: {user.FullName}";
-        ShowClientsView();
+        //UserInfoText.Text = $"Администратор: {user.FullName}";
+        MainContentPresenter.Content = _clientsView; // По умолчанию "Клиенты"
     }
 
-    private void NavListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        switch (NavListBox.SelectedIndex)
+    private void NavButton_Click(object sender, RoutedEventArgs e)
         {
-            case 0:
-                ShowClientsView();
-                break;
-            case 1:
-                ShowOrdersView();
-                break;
-            case 2:
-                ShowLoyaltyView();
-                break;
-            case 3:
-                ShowReportsView();
-                break;
-            case 4:
-                ShowSettingsView();
-                break;
+            if (sender == BtnClients)
+                MainContentPresenter.Content = _clientsView;
+            else if (sender == BtnOrders)
+                MainContentPresenter.Content = _ordersView;
+            else if (sender == BtnLoyalty)
+                MainContentPresenter.Content = _loyaltyView;
+            else if (sender == BtnReports)
+                MainContentPresenter.Content = _reportsView;
+            else if (sender == BtnSettings)
+                MainContentPresenter.Content = _settingsView;
         }
-    }
 
-    private void ShowClientsView()
-    {
-        MainContent.Content = new ClientsView(); // Реализуйте этот UserControl отдельно
-    }
 
-    private void ShowOrdersView()
-    {
-        MainContent.Content = new OrdersView(); // Реализуйте этот UserControl отдельно
-    }
-
-    private void ShowLoyaltyView()
-    {
-        MainContent.Content = new LoyaltyView(); // Реализуйте этот UserControl отдельно
-    }
-
-    private void ShowReportsView()
-    {
-        MainContent.Content = new ReportsView(); // Реализуйте этот UserControl отдельно
-    }
-
-    private void ShowSettingsView()
-    {
-        MainContent.Content = new SettingsView(); // Реализуйте этот UserControl отдельно
-    }
 }

@@ -78,7 +78,7 @@ namespace CafeClient.DataAccess.Repositories
                 PasswordHash = row["password_hash"].ToString(),
                 FullName = row["full_name"].ToString(),
                 Role = row["role"].ToString(),
-                DateCreated = row["date_created"] is System.DBNull ? default : (System.DateTime)row["date_created"]
+                DateCreated = row["date_created"].ToString()
             };
         }
     }

@@ -53,5 +53,9 @@ namespace CafeClient.BusinessLogic.Managers
         public List<Order> GetOrdersByClientId(int clientId) => _orderRepository.GetByClientId(clientId);
 
         public Order GetOrderById(int orderId) => _orderRepository.GetById(orderId);
+
+        public List<Order> GetAllOrders() => _orderRepository.GetAll();
+
+        public List<Order> SearchOrders(string searchTerm) => _orderRepository.Search(searchTerm);
     }
 }

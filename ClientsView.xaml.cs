@@ -1,6 +1,9 @@
 using System.Windows.Controls;
 using CafeClient.Presentation.ViewModels;
 using CafeClient.BusinessLogic.Managers;
+using CafeClient.DataAccess.Repositories;
+using CafeClient.DataAccess;
+using diplom.DataAcess.ViewModel;
 
 namespace CafeClient.Presentation.Views
 {
@@ -9,8 +12,13 @@ namespace CafeClient.Presentation.Views
         public ClientsView()
         {
             InitializeComponent();
-            // Передайте сюда ClientManager через DI или ServiceLocator
-            DataContext = new ClientsViewModel(App.ClientManagerInstance);
+            var db = new DbConnection();
+            var clientRepo = new ClientRepository(db);
+            var loyaltyRepo = new LoyaltyLevelRepository(db);
+            var clientManager = new ClientManager(clientRepo, loyaltyRepo);
+            DataContext = new ClientsViewModel(clientManager);
         }
+
+       
     }
 }

@@ -5,7 +5,25 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="Настройки" FontSize="20" FontWeight="Bold" Margin="0,0,0,12"/>
-            <TextBlock Text="Здесь будут настройки приложения." Foreground="#888"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="Тема:" Width="120" VerticalAlignment="Center"/>
+                <ComboBox Width="180" SelectedItem="{Binding SelectedTheme}">
+                    <ComboBoxItem Content="Светлая"/>
+                    <ComboBoxItem Content="Темная"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="Язык:" Width="120" VerticalAlignment="Center"/>
+                <ComboBox Width="180" SelectedItem="{Binding SelectedLanguage}">
+                    <ComboBoxItem Content="Русский"/>
+                    <ComboBoxItem Content="English"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="Путь к базе данных:" Width="120" VerticalAlignment="Center"/>
+                <TextBox Width="260" Text="{Binding DatabasePath}"/>
+            </StackPanel>
+            <Button Content="Сохранить" Width="120" Margin="0,12,0,0" Command="{Binding SaveCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>

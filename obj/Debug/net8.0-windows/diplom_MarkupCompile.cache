@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\murad\Documents\Диплом\Грачев\diplom\App.xaml
-2-216653475
+11-2083208162
 
-251184150680
+43794379199
 208-1690912718
-LoginWindow.xaml;MainWindow.xaml;
+AddClientWindow.xaml;AddLoyaltyLevelWindow.xaml;AddOrderWindow.xaml;ClientsView.xaml;LoginWindow.xaml;LoyaltyView.xaml;MainWindow.xaml;OrdersView.xaml;ReportsView.xaml;SelectClientWindow.xaml;SettingsView.xaml;
 
 False
 

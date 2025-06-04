@@ -9,6 +9,6 @@ namespace CafeClient.BusinessLogic.Models
         public string PasswordHash { get; set; }
         public string FullName { get; set; }
         public string Role { get; set; }
-        public DateTime DateCreated { get; set; }
+        public string DateCreated { get; set; }
     }
 }

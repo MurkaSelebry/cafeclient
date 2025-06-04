@@ -12,13 +12,18 @@
                 <Button Content="Добавить клиента" Height="28" Background="#4CAF50" Foreground="White" Padding="16,0"
                         Command="{Binding AddClientCommand}"/>
             </StackPanel>
-            <DataGrid ItemsSource="{Binding Clients}" AutoGenerateColumns="False" Height="300">
+            <DataGrid x:Name="clientsDataGrid"  ItemsSource="{Binding Clients}" AutoGenerateColumns="False" Height="300">
                 <DataGrid.Columns>
+
                     <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40"/>
-                    <DataGridTextColumn Header="Имя" Binding="{Binding FullName}" Width="*"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="*"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding LastName}" Width="*"/>
                     <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}" Width="120"/>
                     <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="150"/>
+                    <DataGridTextColumn Header="Уровень лояльности" Binding="{Binding BirthDate}" Width="100"/>
                     <DataGridTextColumn Header="Уровень лояльности" Binding="{Binding LoyaltyLevelId}" Width="100"/>
+                    <DataGridTextColumn Header="Уровень лояльности" Binding="{Binding BonusPoints}" Width="100"/>
+                    <DataGridTextColumn Header="Уровень лояльности" Binding="{Binding RegistrationDate}" Width="100"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
