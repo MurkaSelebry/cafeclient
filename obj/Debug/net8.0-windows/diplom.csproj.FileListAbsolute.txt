@@ -77,3 +77,7 @@ C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windo
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\AddLoyaltyLevelWindow.g.cs
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\SelectClientWindow.baml
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\SelectClientWindow.g.cs
+C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\Themes\DarkTheme.baml
+C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\Themes\LightTheme.baml
+C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\Languages\en-US.baml
+C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\Languages\ru-RU.baml
