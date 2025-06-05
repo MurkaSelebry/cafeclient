@@ -1,7 +1,88 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <sys:String x:Key="AppTitle" xmlns:sys="clr-namespace:System;assembly=mscorlib">Система учета клиентов кафе</sys:String>
-    <sys:String x:Key="Settings" xmlns:sys="clr-namespace:System;assembly=mscorlib" >Настройки</sys:String>
-    <sys:String x:Key="Theme" xmlns:sys="clr-namespace:System;assembly=mscorlib" >Тема</sys:String>
+    <sys:String x:Key="AppTitle" xmlns:sys="clr-namespace:System;assembly=mscorlib">CaféClient - Система учета клиентов кафе</sys:String>
+
+    <sys:String x:Key="Clients" xmlns:sys="clr-namespace:System;assembly=mscorlib">Клиенты</sys:String>
+    <sys:String x:Key="Orders" xmlns:sys="clr-namespace:System;assembly=mscorlib">Заказы</sys:String>
+    <sys:String x:Key="Loyalty" xmlns:sys="clr-namespace:System;assembly=mscorlib">Программа лояльности</sys:String>
+    <sys:String x:Key="Reports" xmlns:sys="clr-namespace:System;assembly=mscorlib">Отчеты</sys:String>
+    <sys:String x:Key="Settings" xmlns:sys="clr-namespace:System;assembly=mscorlib">Настройки</sys:String>
+
+    <sys:String x:Key="Add" xmlns:sys="clr-namespace:System;assembly=mscorlib">Добавить</sys:String>
+    <sys:String x:Key="Edit" xmlns:sys="clr-namespace:System;assembly=mscorlib">Редактировать</sys:String>
+    <sys:String x:Key="Delete" xmlns:sys="clr-namespace:System;assembly=mscorlib">Удалить</sys:String>
+    <sys:String x:Key="Save" xmlns:sys="clr-namespace:System;assembly=mscorlib">Сохранить</sys:String>
+    <sys:String x:Key="Cancel" xmlns:sys="clr-namespace:System;assembly=mscorlib">Отмена</sys:String>
+    <sys:String x:Key="Search" xmlns:sys="clr-namespace:System;assembly=mscorlib">Поиск</sys:String>
+    <sys:String x:Key="Select" xmlns:sys="clr-namespace:System;assembly=mscorlib">Выбрать</sys:String>
+
+    <sys:String x:Key="AddClient" xmlns:sys="clr-namespace:System;assembly=mscorlib">Добавить клиента</sys:String>
+    <sys:String x:Key="FirstName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Имя</sys:String>
+    <sys:String x:Key="LastName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Фамилия</sys:String>
+    <sys:String x:Key="Phone" xmlns:sys="clr-namespace:System;assembly=mscorlib">Телефон</sys:String>
+    <sys:String x:Key="Email" xmlns:sys="clr-namespace:System;assembly=mscorlib">Email</sys:String>
+    <sys:String x:Key="BirthDate" xmlns:sys="clr-namespace:System;assembly=mscorlib">Дата рождения</sys:String>
+    <sys:String x:Key="LoyaltyLevel" xmlns:sys="clr-namespace:System;assembly=mscorlib">Уровень лояльности</sys:String>
+    <sys:String x:Key="BonusPoints" xmlns:sys="clr-namespace:System;assembly=mscorlib">Бонусные баллы</sys:String>
+    <sys:String x:Key="RegistrationDate" xmlns:sys="clr-namespace:System;assembly=mscorlib">Дата регистрации</sys:String>
+    <sys:String x:Key="SelectClient" xmlns:sys="clr-namespace:System;assembly=mscorlib">Выбрать клиента</sys:String>
+
+    <sys:String x:Key="AddOrder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Добавить заказ</sys:String>
+    <sys:String x:Key="NewOrder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Новый заказ</sys:String>
+    <sys:String x:Key="OrderDate" xmlns:sys="clr-namespace:System;assembly=mscorlib">Дата заказа</sys:String>
+    <sys:String x:Key="TotalAmount" xmlns:sys="clr-namespace:System;assembly=mscorlib">Общая сумма</sys:String>
+    <sys:String x:Key="Status" xmlns:sys="clr-namespace:System;assembly=mscorlib">Статус</sys:String>
+    <sys:String x:Key="OrderItems" xmlns:sys="clr-namespace:System;assembly=mscorlib">Позиции заказа</sys:String>
+    <sys:String x:Key="AddItem" xmlns:sys="clr-namespace:System;assembly=mscorlib">Добавить позицию</sys:String>
+    <sys:String x:Key="RemoveItem" xmlns:sys="clr-namespace:System;assembly=mscorlib">Удалить позицию</sys:String>
+    <sys:String x:Key="ClientInfo" xmlns:sys="clr-namespace:System;assembly=mscorlib">Информация о клиенте</sys:String>
+    <sys:String x:Key="Client" xmlns:sys="clr-namespace:System;assembly=mscorlib">Клиент</sys:String>
+    <sys:String x:Key="Pay" xmlns:sys="clr-namespace:System;assembly=mscorlib">Оплатить</sys:String>
+
+    <sys:String x:Key="ProductName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Название</sys:String>
+    <sys:String x:Key="Quantity" xmlns:sys="clr-namespace:System;assembly=mscorlib">Количество</sys:String>
+    <sys:String x:Key="Price" xmlns:sys="clr-namespace:System;assembly=mscorlib">Цена</sys:String>
+    <sys:String x:Key="Total" xmlns:sys="clr-namespace:System;assembly=mscorlib">Итого</sys:String>
+    <sys:String x:Key="Amount" xmlns:sys="clr-namespace:System;assembly=mscorlib">Сумма</sys:String>
+    <sys:String x:Key="Actions" xmlns:sys="clr-namespace:System;assembly=mscorlib">Действия</sys:String>
+
+    <sys:String x:Key="AddLoyaltyLevel" xmlns:sys="clr-namespace:System;assembly=mscorlib">Добавить уровень</sys:String>
+    <sys:String x:Key="LoyaltyProgram" xmlns:sys="clr-namespace:System;assembly=mscorlib">Программа лояльности</sys:String>
+    <sys:String x:Key="LevelName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Название</sys:String>
+    <sys:String x:Key="MinPoints" xmlns:sys="clr-namespace:System;assembly=mscorlib">Мин. баллы</sys:String>
+    <sys:String x:Key="DiscountPercent" xmlns:sys="clr-namespace:System;assembly=mscorlib">Скидка (%)</sys:String>
+    <sys:String x:Key="LoyaltyStats" xmlns:sys="clr-namespace:System;assembly=mscorlib">Статистика по лояльности</sys:String>
+    <sys:String x:Key="AvailablePoints" xmlns:sys="clr-namespace:System;assembly=mscorlib">Доступно баллов</sys:String>
+    <sys:String x:Key="LoyaltyInfo" xmlns:sys="clr-namespace:System;assembly=mscorlib">Информация о лояльности</sys:String>
+
+    <sys:String x:Key="GenerateReport" xmlns:sys="clr-namespace:System;assembly=mscorlib">Сформировать</sys:String>
+    <sys:String x:Key="SaveReport" xmlns:sys="clr-namespace:System;assembly=mscorlib">Сохранить в txt</sys:String>
+    <sys:String x:Key="ClientStats" xmlns:sys="clr-namespace:System;assembly=mscorlib">Статистика по клиентам</sys:String>
+    <sys:String x:Key="PopularProducts" xmlns:sys="clr-namespace:System;assembly=mscorlib">Популярные товары</sys:String>
+    <sys:String x:Key="OrderDynamics" xmlns:sys="clr-namespace:System;assembly=mscorlib">Динамика заказов</sys:String>
+    <sys:String x:Key="LoyaltyEfficiency" xmlns:sys="clr-namespace:System;assembly=mscorlib">Эффективность лояльности</sys:String>
+
+    <sys:String x:Key="Theme" xmlns:sys="clr-namespace:System;assembly=mscorlib">Тема</sys:String>
     <sys:String x:Key="Language" xmlns:sys="clr-namespace:System;assembly=mscorlib">Язык</sys:String>
-</ResourceDictionary> 
+    <sys:String x:Key="DatabasePath" xmlns:sys="clr-namespace:System;assembly=mscorlib">Путь к базе данных</sys:String>
+    <sys:String x:Key="LightTheme" xmlns:sys="clr-namespace:System;assembly=mscorlib">Светлая</sys:String>
+    <sys:String x:Key="DarkTheme" xmlns:sys="clr-namespace:System;assembly=mscorlib">Темная</sys:String>
+    <sys:String x:Key="Russian" xmlns:sys="clr-namespace:System;assembly=mscorlib">Русский</sys:String>
+    <sys:String x:Key="English" xmlns:sys="clr-namespace:System;assembly=mscorlib">English</sys:String>
+
+    <sys:String x:Key="Login" xmlns:sys="clr-namespace:System;assembly=mscorlib">Войти</sys:String>
+    <sys:String x:Key="Username" xmlns:sys="clr-namespace:System;assembly=mscorlib">Имя пользователя</sys:String>
+    <sys:String x:Key="Password" xmlns:sys="clr-namespace:System;assembly=mscorlib">Пароль</sys:String>
+    <sys:String x:Key="Administrator" xmlns:sys="clr-namespace:System;assembly=mscorlib">Администратор</sys:String>
+
+    <sys:String x:Key="SettingsSaved" xmlns:sys="clr-namespace:System;assembly=mscorlib">Настройки успешно сохранены!</sys:String>
+    <sys:String x:Key="Error" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ошибка</sys:String>
+    <sys:String x:Key="Warning" xmlns:sys="clr-namespace:System;assembly=mscorlib">Предупреждение</sys:String>
+    <sys:String x:Key="Information" xmlns:sys="clr-namespace:System;assembly=mscorlib">Информация</sys:String>
+    <sys:String x:Key="SettingsNote" xmlns:sys="clr-namespace:System;assembly=mscorlib">Примечание: Изменения темы и языка применяются сразу после сохранения.</sys:String>
+
+    <sys:String x:Key="ID" xmlns:sys="clr-namespace:System;assembly=mscorlib">ID</sys:String>
+    <sys:String x:Key="Name" xmlns:sys="clr-namespace:System;assembly=mscorlib">Название</sys:String>
+    <sys:String x:Key="Date" xmlns:sys="clr-namespace:System;assembly=mscorlib">Дата</sys:String>
+    <sys:String x:Key="Count" xmlns:sys="clr-namespace:System;assembly=mscorlib">Кол-во</sys:String>
+</ResourceDictionary>

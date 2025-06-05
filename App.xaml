@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:diplom"
              StartupUri="LoginWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Тема по умолчанию -->
+                <ResourceDictionary Source="Themes/LightTheme.xaml"/>
+                <!-- Язык по умолчанию -->
+                <ResourceDictionary Source="Languages/ru-RU.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

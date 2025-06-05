@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:diplom"
         mc:Ignorable="d"
-        Title="CaféClient"
+        Title="{DynamicResource AppTitle}"
         WindowStartupLocation="CenterScreen"
         Width="900" Height="600"
         Background="#F7F7F7"
@@ -26,15 +26,15 @@
 
             <!-- Навигация -->
             <StackPanel Background="#F4F8F4" Grid.Column="0">
-            <Button Content="Клиенты" Name="BtnClients" Margin="10" Height="40" Click="NavButton_Click"/>
-            <Button Content="Заказы" Name="BtnOrders" Margin="10" Height="40" Click="NavButton_Click"/>
-            <Button Content="Программа лояльности" Name="BtnLoyalty" Margin="10" Height="40" Click="NavButton_Click"/>
-            <Button Content="Отчеты" Name="BtnReports" Margin="10" Height="40" Click="NavButton_Click"/>
-            <Button Content="Настройки" Name="BtnSettings" Margin="10" Height="40" Click="NavButton_Click"/>
-        </StackPanel>
+                <Button Content="{DynamicResource Clients}" Name="BtnClients" Margin="10" Height="40" Click="NavButton_Click"/>
+                <Button Content="{DynamicResource Orders}" Name="BtnOrders" Margin="10" Height="40" Click="NavButton_Click"/>
+                <Button Content="{DynamicResource Loyalty}" Name="BtnLoyalty" Margin="10" Height="40" Click="NavButton_Click"/>
+                <Button Content="{DynamicResource Reports}" Name="BtnReports" Margin="10" Height="40" Click="NavButton_Click"/>
+                <Button Content="{DynamicResource Settings}" Name="BtnSettings" Margin="10" Height="40" Click="NavButton_Click"/>
+            </StackPanel>
 
             <!-- Контент -->
-                    <ContentPresenter x:Name="MainContentPresenter" Grid.Column="1" Margin="16"/>
+            <ContentPresenter x:Name="MainContentPresenter" Grid.Column="1" Margin="16"/>
 
         </Grid>
     </Grid>

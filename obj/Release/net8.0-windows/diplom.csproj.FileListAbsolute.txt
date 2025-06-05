@@ -81,3 +81,4 @@ C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Release\net8.0-win
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Release\net8.0-windows\diplom.pdb
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Release\net8.0-windows\diplom.genruntimeconfig.cache
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Release\net8.0-windows\ref\diplom.dll
+C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Release\net8.0-windows\App.baml

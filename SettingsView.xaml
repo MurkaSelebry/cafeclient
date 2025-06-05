@@ -4,26 +4,28 @@
              Background="White">
     <Grid>
         <StackPanel>
-            <TextBlock Text="Настройки" FontSize="20" FontWeight="Bold" Margin="0,0,0,12"/>
+            <TextBlock Text="{DynamicResource Settings}" FontSize="20" FontWeight="Bold" Margin="0,0,0,12"/>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                <TextBlock Text="Тема:" Width="120" VerticalAlignment="Center"/>
-                <ComboBox Width="180" SelectedItem="{Binding SelectedTheme}">
-                    <ComboBoxItem Content="Светлая"/>
-                    <ComboBoxItem Content="Темная"/>
+                <TextBlock Text="{DynamicResource Theme}" Width="120" VerticalAlignment="Center"/>
+                <ComboBox Width="180" SelectedValue="{Binding SelectedTheme}" SelectedValuePath="Content">
+                    <ComboBoxItem Content="{DynamicResource LightTheme}"/>
+                    <ComboBoxItem Content="{DynamicResource DarkTheme}"/>
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                <TextBlock Text="Язык:" Width="120" VerticalAlignment="Center"/>
-                <ComboBox Width="180" SelectedItem="{Binding SelectedLanguage}">
-                    <ComboBoxItem Content="Русский"/>
-                    <ComboBoxItem Content="English"/>
+                <TextBlock Text="{DynamicResource Language}" Width="120" VerticalAlignment="Center"/>
+                <ComboBox Width="180" SelectedValue="{Binding SelectedLanguage}" SelectedValuePath="Content">
+                    <ComboBoxItem Content="{DynamicResource Russian}"/>
+                    <ComboBoxItem Content="{DynamicResource English}"/>
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
-                <TextBlock Text="Путь к базе данных:" Width="120" VerticalAlignment="Center"/>
+                <TextBlock Text="{DynamicResource DatabasePath}" Width="120" VerticalAlignment="Center"/>
                 <TextBox Width="260" Text="{Binding DatabasePath}"/>
             </StackPanel>
-            <Button Content="Сохранить" Width="120" Margin="0,12,0,0" Command="{Binding SaveCommand}"/>
+            <Button Content="{DynamicResource Save}" Width="120" Margin="0,12,0,0" Command="{Binding SaveCommand}" Background="#4CAF50" Foreground="White"/>
+            <TextBlock Text="{DynamicResource SettingsNote}" 
+                       FontSize="11" Foreground="Gray" Margin="0,8,0,0" TextWrapping="Wrap"/>
         </StackPanel>
     </Grid>
 </UserControl>

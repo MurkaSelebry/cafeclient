@@ -81,3 +81,4 @@ C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windo
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\Themes\LightTheme.baml
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\Languages\en-US.baml
 C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\Languages\ru-RU.baml
+C:\Users\murad\Documents\Диплом\Грачев\diplom\obj\Debug\net8.0-windows\App.baml
